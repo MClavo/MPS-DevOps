@@ -22,7 +22,7 @@ jobs:
 
     - name: Build with Maven
       run: |
-        cd temas/inyeccion/java/cafeteria
+        cd core\src\main\java\es\uca\mps\devops
         mvn clean compile
 
   test:
