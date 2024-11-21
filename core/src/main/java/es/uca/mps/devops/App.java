@@ -1,4 +1,4 @@
-package com.uca;
+package es.uca.mps.devops;
 
 /**
  * Hello world!
