@@ -1,5 +1,6 @@
-import java.io.*;
+package es.uca.mps.devops;
 
+import java.io.*;
 public class MatrixIO {
     private static final int N = 5;
 

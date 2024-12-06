@@ -1,3 +1,5 @@
+package es.uca.mps.devops;
+
 import java.io.*;
 import java.util.Scanner;
 
