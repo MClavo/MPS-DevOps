@@ -1,13 +1,13 @@
-name: Matriz Java
+name: Test Matriz Java on Push
+run-name: ${{ github.actor }} ha realizado un cambio.
 
 on:
-  workflow_dispatch:
+  [push]
     branches:
       - main  
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
