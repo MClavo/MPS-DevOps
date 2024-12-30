@@ -27,6 +27,7 @@ public class MatrixMain {
 
             switch (opcion) {
                 case 1:
+                    scanner.nextLine(); // Limpiar el buffer
                     matrizACargada = cargarMatriz("A", matrizA);
                     matrizBCargada = cargarMatriz("B", matrizB);
                     break;
@@ -64,7 +65,9 @@ public class MatrixMain {
 
     private static boolean cargarMatriz(String nombre, int[][] matriz) {
         System.out.print("Ingrese el nombre del archivo para cargar la matriz " + nombre + ": ");
-        scanner.nextLine(); // Limpiar el buffer
+        
+        // Limpiar el buffer
+      
         String nombreArchivo = scanner.nextLine();
         if (MatrixIO.cargarMatriz(nombreArchivo, matriz)) {
             System.out.println("Matriz " + nombre + " cargada correctamente.");
