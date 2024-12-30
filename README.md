@@ -11,5 +11,5 @@ docker-compose build
 
 **Para ejecutar el programa**
 ``` shell
-docker-compose run matrix-app    
+docker-compose run --rm matrix-app    
 ```
