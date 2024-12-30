@@ -20,7 +20,7 @@ public class MatrixIOTest {
 
     @Test
     public void testMostrarMatriz() {
-        // This test is for visual verification, not automated
+        // Test para comprobacion visual, no automatizado
         MatrixIO.mostrarMatriz(MATRIX);
     }
 
@@ -42,7 +42,6 @@ public class MatrixIOTest {
         assertTrue(result);
         assertArrayEquals(MATRIX, loadedMatrix);
 
-        // Clean up
         new File(FILE_NAME).delete();
     }
 
@@ -64,7 +63,6 @@ public class MatrixIOTest {
 
         assertArrayEquals(MATRIX, loadedMatrix);
 
-        // Clean up
         new File(FILE_NAME).delete();
     }
 }
