@@ -42,11 +42,3 @@ jobs:
 
     - name: Run tests
       run: cd core && mvn test
-
-    - name: Create Issue on Failure
-      if: failure()
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: "ERROR TEST en: ${{ github.workflow }} - ${{ github.event.head_commit.message }}"
-        content-filepath: issue-body.md
-        labels: "bug, automated issue"
