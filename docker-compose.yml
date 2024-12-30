@@ -1,0 +1,9 @@
+services:
+  matrix-app:
+    image: matrix-app
+    build: .
+    stdin_open: true 
+    tty: true
+    restart: no
+    volumes:
+      - .:/app
