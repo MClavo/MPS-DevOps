@@ -31,6 +31,30 @@ public class MatrixOperationsTest {
         {25, 24, 23, 22, 21}
     };
 
+    private static final int[][] IDENTITY_MATRIX = {
+        {1, 0, 0, 0, 0},
+        {0, 1, 0, 0, 0},
+        {0, 0, 1, 0, 0},
+        {0, 0, 0, 1, 0},
+        {0, 0, 0, 0, 1}
+    };
+
+    private static final int[][] SYMMETRIC_MATRIX = {
+        {1, 2, 3, 4, 5},
+        {2, 1, 6, 7, 8},
+        {3, 6, 1, 9, 10},
+        {4, 7, 9, 1, 11},
+        {5, 8, 10, 11, 1}
+    };
+
+    private static final int[][] NON_SYMMETRIC_MATRIX = {
+        {1, 2, 3, 4, 5},
+        {6, 7, 8, 9, 10},
+        {11, 12, 13, 14, 15},
+        {16, 17, 18, 19, 20},
+        {21, 22, 23, 24, 25}
+    };
+
 
     @Test
     public void testSumarMatrices() {
@@ -59,6 +83,21 @@ public class MatrixOperationsTest {
         };
 
         MatrixOperations.restarMatrices(MATRIX_C, MATRIX_B, R);
+        assertArrayEquals(expected, R);
+    }
+
+    @Test
+    public void testMultiplicarMatrices() {
+        int[][] R = new int[N][N];
+        int[][] expected = {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+
+        MatrixOperations.multiplicarMatrices(MATRIX_A, IDENTITY_MATRIX, R);
         assertArrayEquals(expected, R);
     }
 
