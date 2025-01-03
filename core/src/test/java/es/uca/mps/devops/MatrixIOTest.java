@@ -44,4 +44,25 @@ public class MatrixIOTest {
 
         new File(FILE_NAME).delete();
     }
+
+    @Test
+    public void testGuardarMatriz() {
+        MatrixIO.guardarMatriz(FILE_NAME, MATRIX);
+
+        int[][] loadedMatrix = new int[N][N];
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
+            for (int i = 0; i < N; i++) {
+                String[] elementos = br.readLine().trim().split("\\s+");
+                for (int j = 0; j < N; j++) {
+                    loadedMatrix[i][j] = Integer.parseInt(elementos[j]);
+                }
+            }
+        } catch (IOException e) {
+            fail("Error reading test file: " + e.getMessage());
+        }
+
+        assertArrayEquals(MATRIX, loadedMatrix);
+
+        new File(FILE_NAME).delete();
+    }
 }

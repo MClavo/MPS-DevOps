@@ -38,6 +38,12 @@ public class MatrixMain {
                 System.out.println("Resultado de la multiplicación de matrices:");
                 MatrixIO.mostrarMatriz(resultado);
                 break;
+            case 6:
+                System.out.print("Ingrese el nombre del archivo para guardar el resultado: ");
+                scanner.nextLine(); // Limpiar buffer
+                String nombreArchivo = scanner.nextLine();
+                MatrixIO.guardarMatriz(nombreArchivo, resultado);
+                break;
             default:
                 System.out.println("Opción no válida.");
             
