@@ -33,8 +33,14 @@ public class MatrixMain {
             case 4:
                 System.out.println("Gracias por usar el programa.");
                 break;
+            case 5:
+                MatrixOperations.multiplicarMatrices(matrizA, matrizB, resultado);
+                System.out.println("Resultado de la multiplicación de matrices:");
+                MatrixIO.mostrarMatriz(resultado);
+                break;
             default:
                 System.out.println("Opción no válida.");
+            
         }
     }
 }
