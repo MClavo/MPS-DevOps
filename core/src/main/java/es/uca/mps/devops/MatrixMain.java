@@ -51,6 +51,12 @@ public class MatrixMain {
                     System.out.println("La matriz A no es simétrica.");
                 }
                 break;
+            case 8:
+                int[][] resultadoTranspuesta = new int[5][5];
+                MatrixOperations.transponerMatriz(matrizA, resultadoTranspuesta);
+                System.out.println("Transpuesta de la matriz A:");
+                MatrixIO.mostrarMatriz(resultadoTranspuesta);
+                break;                
             default:
                 System.out.println("Opción no válida.");
             
