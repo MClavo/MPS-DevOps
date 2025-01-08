@@ -44,6 +44,13 @@ public class MatrixMain {
                 String nombreArchivo = scanner.nextLine();
                 MatrixIO.guardarMatriz(nombreArchivo, resultado);
                 break;
+            case 7:
+                if (MatrixOperations.verificarSimetria(matrizA)) {
+                    System.out.println("La matriz A es simétrica.");
+                } else {
+                    System.out.println("La matriz A no es simétrica.");
+                }
+                break;
             default:
                 System.out.println("Opción no válida.");
             
