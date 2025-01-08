@@ -30,4 +30,14 @@ public class MatrixOperations {
         }
     }
 
+    public static boolean verificarSimetria(int[][] A) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (A[i][j] != A[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
