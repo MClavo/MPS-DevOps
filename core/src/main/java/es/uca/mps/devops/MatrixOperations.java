@@ -40,4 +40,12 @@ public class MatrixOperations {
         }
         return true;
     }
+
+    public static void transponerMatriz(int[][] A, int[][] R) {
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                R[j][i] = A[i][j];
+            }
+        }
+    }
 }
