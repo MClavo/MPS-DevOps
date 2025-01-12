@@ -6,4 +6,4 @@ services:
     tty: true
     restart: no
     volumes:
-      - .:/app
+      - .:/project
