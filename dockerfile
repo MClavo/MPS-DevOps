@@ -16,5 +16,8 @@ COPY core/src core/src
 # Compila el proyecto
 RUN mvn -f core/pom.xml clean package
 
+# Directorio de trabajo para el proyecto, donde se crea un volumen hacia el host
+WORKDIR /project
+
 # Especifica el comando para ejecutar el proyecto
 CMD ["java", "-jar", "/app/core/target/core-1.0-SNAPSHOT.jar"]
